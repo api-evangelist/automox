@@ -1,0 +1,1713 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Automox API",
+        "description": "The Automox API is a powerful interface that allows you to integrate Automox reporting data into you applications and control the various settings of your account.\n\nAll endpoints are only accessible via https and are located at\n`api.automox.com`. For instance: you can see events associated with your account by accessing the following URL with your ID:\n(replace API-KEY with your own):\n```\n  https:\/\/console.automox.com\/api\/events?api_key=API-KEY\n```\n## Limits\nBe nice. If you're sending too many requests too quickly, we'll send back a\n`429` error code (Too Many Requests).\nYou are limited to 5000 requests per hour per `api_key` overall. Practically, this means you should (when possible) authenticate\nusers so that limits are well outside the reach of a given user.\n",
+        "termsOfService": "https:\/\/www.automox.com\/"
+    },
+    "servers": [
+        "httpsconsole.automox.com\/api"
+    ],
+    "paths": {
+        "\/events": {
+            "get": {
+                "summary": "Get Events",
+                "description": "Gets all `Event` objects for the authenticated user.\n",
+                "operationId": "GetsAllEventObjectsForTheAuthenticatedUser",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/events\/{id}": {
+            "get": {
+                "summary": "Get Events",
+                "description": "Gets a specific `Event` object for the authenticated user.\n",
+                "operationId": "GetsASpecificEventObjectForTheAuthenticatedUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    }
+                ]
+            }
+        },
+        "\/orgs": {
+            "get": {
+                "summary": "Get Orgs",
+                "description": "Gets all organizations for the api key\n",
+                "operationId": "GetsAllOrganizationsForTheApiKey",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/orgs\/{id}\/packages": {
+            "get": {
+                "summary": "Get Orgs Packages",
+                "description": "Returns all software packages discovered on all servers (endpoints) of an organization\n",
+                "operationId": "ReturnsAllSoftwarePackagesDiscoveredOnAllServersEndpointsOfAnOrganization",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    }
+                ]
+            }
+        },
+        "\/policies": {
+            "get": {
+                "summary": "Get Policies",
+                "description": "Gets all `Policy` objects for authenticated user\n",
+                "operationId": "GetsAllPolicyObjectsForAuthenticatedUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    }
+                ]
+            }
+        },
+        "\/policies\/{id}": {
+            "get": {
+                "summary": "Get Policies",
+                "description": "Gets a specific `Policy` object for the authenticated user.\n",
+                "operationId": "GetsASpecificPolicyObjectForTheAuthenticatedUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    },
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Put Policies",
+                "description": "Updates a `Policy` object\n",
+                "operationId": "UpdatesAPolicyObject",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    },
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    },
+                    {
+                        "name": "policy",
+                        "in": "body",
+                        "description": "Updated policy object"
+                    }
+                ]
+            }
+        },
+        "\/policies\/{id}\/action": {
+            "post": {
+                "summary": "Post Policies Action",
+                "description": "Schedule a policy for immediate remediation\n",
+                "operationId": "ScheduleAPolicyForImmediateRemediation",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    },
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    },
+                    {
+                        "name": "action",
+                        "in": "formData",
+                        "description": "Remediation action type [remediateAll]"
+                    }
+                ]
+            }
+        },
+        "\/policysets": {
+            "get": {
+                "summary": "Get Policysets",
+                "description": "Gets all `Policy Set` objects for authenticated user\n",
+                "operationId": "GetsAllPolicySetObjectsForAuthenticatedUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    }
+                ]
+            }
+        },
+        "\/policystats": {
+            "get": {
+                "summary": "Get Policystats",
+                "description": "Gets all `Policy Stats` objects for authenticated user\n",
+                "operationId": "GetsAllPolicyStatsObjectsForAuthenticatedUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    }
+                ]
+            }
+        },
+        "\/servers": {
+            "get": {
+                "summary": "Get Servers",
+                "description": "Gets all `Server` objects for authenticated user\n",
+                "operationId": "GetsAllServerObjectsForAuthenticatedUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    }
+                ]
+            }
+        },
+        "\/servers\/{id}": {
+            "get": {
+                "summary": "Get Servers",
+                "description": "Gets a specific `Server` object for the authenticated user.\n",
+                "operationId": "GetsASpecificServerObjectForTheAuthenticatedUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    },
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Put Servers",
+                "description": "Updates a `Server` object\n",
+                "operationId": "UpdatesAServerObject",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    },
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    },
+                    {
+                        "name": "server",
+                        "in": "body",
+                        "description": "Updated server object"
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete Servers",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    },
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    }
+                ]
+            }
+        },
+        "\/servers\/{id}\/packages": {
+            "get": {
+                "summary": "Get Servers Packages",
+                "description": "Returns the command queue for the specified server (endpoint)\n",
+                "operationId": "ReturnsTheCommandQueueForTheSpecifiedServerEndpoint",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    },
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    }
+                ]
+            }
+        },
+        "\/servers\/{id}\/queues": {
+            "get": {
+                "summary": "Get Servers Queues",
+                "description": "Returns the command queue for the specified server (endpoint)\n",
+                "operationId": "ReturnsTheCommandQueueForTheSpecifiedServerEndpoint",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    },
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Servers Queues",
+                "description": "Issue a command to an endpoint. Can be used to install a specific set of patches or reboot an endpoint\n",
+                "operationId": "IssueACommandToAnEndpointCanBeUsedToInstallASpecificSetOfPatchesOrRebootAnEndpoin",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    },
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    },
+                    {
+                        "name": "command",
+                        "in": "body",
+                        "description": "Command object"
+                    }
+                ]
+            }
+        },
+        "\/servergroups": {
+            "get": {
+                "summary": "Get Servergroups",
+                "description": "Gets all `Server Group` objects for authenticated user\n",
+                "operationId": "GetsAllServerGroupObjectsForAuthenticatedUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Servergroups",
+                "description": "Updates a `Server Group` object\n",
+                "operationId": "UpdatesAServerGroupObject",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "servergroup",
+                        "in": "body",
+                        "description": "Updated server object"
+                    }
+                ]
+            }
+        },
+        "\/servergroups\/{id}": {
+            "get": {
+                "summary": "Get Servergroups",
+                "description": "Gets a specific `Server Group` object for the authenticated user.\n",
+                "operationId": "GetsASpecificServerGroupObjectForTheAuthenticatedUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    },
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Put Servergroups",
+                "description": "Updates a `Server Group` object\n",
+                "operationId": "UpdatesAServerGroupObject",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    },
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    },
+                    {
+                        "name": "servergroup",
+                        "in": "body",
+                        "description": "Updated server object"
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete Servergroups",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    },
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    }
+                ]
+            }
+        },
+        "\/software_version": {
+            "get": {
+                "summary": "Get Software Version",
+                "description": "Retrieves software packages and patches for an organization, specific policy, or just those that need [approval | attention | exceptions | pending update].\n",
+                "operationId": "RetrievesSoftwarePackagesAndPatchesForAnOrganizationSpecificPolicyOrJustThoseThatNeed",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    },
+                    {
+                        "name": "policyId",
+                        "in": "query",
+                        "description": "Return results for a specific Policy ID"
+                    },
+                    {
+                        "name": "needsApproval",
+                        "in": "query",
+                        "description": "Retrieve software that needs approval"
+                    },
+                    {
+                        "name": "needsAttention",
+                        "in": "query",
+                        "description": "Retrieve software that needs attention"
+                    },
+                    {
+                        "name": "exceptions",
+                        "in": "query",
+                        "description": "Retrieve software that applies to exception endpoints"
+                    },
+                    {
+                        "name": "pendingUpdate",
+                        "in": "query",
+                        "description": "Retrieve software that is pending update"
+                    },
+                    {
+                        "name": "l",
+                        "in": "query",
+                        "description": "Result Limit"
+                    },
+                    {
+                        "name": "p",
+                        "in": "query",
+                        "description": "Page Number"
+                    }
+                ]
+            }
+        },
+        "\/software": {
+            "get": {
+                "summary": "Get Software",
+                "description": "Retrieves software packages and patches for an organization, allows filtering the list of software by name\n",
+                "operationId": "RetrievesSoftwarePackagesAndPatchesForAnOrganizationAllowsFilteringTheListOfSoftwareBy",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Name of software package (wildcards ok) i.e. *KB12345*"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Limit number of results returned"
+                    },
+                    {
+                        "name": "groupID",
+                        "in": "query",
+                        "description": "Return software for a given group ID"
+                    }
+                ]
+            }
+        },
+        "\/approvals\/{id}": {
+            "put": {
+                "summary": "Put Approvals",
+                "description": "Update a manual approval record. Set `manual_approval` attribute of `approval` object to `true` to approve a patch; set it to `false` to reject a patch\n",
+                "operationId": "UpdateAManualApprovalRecordSetManualApprovalAttributeOfApprovalObjectToTrueToApprove",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    },
+                    {
+                        "name": "approval",
+                        "in": "body",
+                        "description": "Approval object"
+                    }
+                ]
+            }
+        },
+        "\/users": {
+            "get": {
+                "summary": "Get Users",
+                "description": "Gets all `User` objects for the authenticated user.\n",
+                "operationId": "GetsAllUserObjectsForTheAuthenticatedUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "o",
+                        "in": "query",
+                        "description": "Organization ID"
+                    }
+                ]
+            }
+        },
+        "\/users\/{id}\/queues": {
+            "get": {
+                "summary": "Get Users Queues",
+                "description": "Gets all commands executed for specified user id\n",
+                "operationId": "GetsAllCommandsExecutedForSpecifiedUserId",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event ID"
+                    }
+                ]
+            }
+        },
+        "\/reports\/prepatch": {
+            "get": {
+                "summary": "Get Reports Prepatch",
+                "description": "Retrieve the prepatch report\n",
+                "operationId": "RetrieveThePrepatchReport",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "Report Start Date - `YYYY-MM-DD`"
+                    }
+                ]
+            }
+        },
+        "\/reports\/noncompliance": {
+            "get": {
+                "summary": "Get Reports Noncompliance",
+                "description": "Retrieve the non compliant devices report\n",
+                "operationId": "RetrieveTheNonCompliantDevicesReport",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "Report Start Date - `YYYY-MM-DD`"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Event": {
+                "type": "object",
+                "properties": {
+                    "create_time": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policy_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policy_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policy_type_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "server_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "server_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "user_id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "EventData": {
+                "type": "object",
+                "properties": {
+                    "firstname": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lastname": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "orgname": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ip": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "os": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "systemname": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "text": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "patches": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Policy": {
+                "type": "object",
+                "properties": {
+                    "create_time": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "notes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "organization_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policy_type_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "schedule_days": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "schedule_time": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PolicyConfiguration": {
+                "type": "object",
+                "properties": {
+                    "auto_patch": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "auto_reboot": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "installation_code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "os_family": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "package_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "evaluation_code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "remediation_code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "test_code": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PolicySets": {
+                "type": "object",
+                "properties": {
+                    "create_time": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "notes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "organization_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policies": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PolicyStats": {
+                "type": "object",
+                "properties": {
+                    "compliant": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "noncompliant": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "organization_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "pending": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policy_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policy_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policy_type_name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Server": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "create_time": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "deleted": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "instance_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ip_addrs": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "last_checkin_time": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "last_refresh_time": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "last_update_time": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "needs_reboot": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "organization_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "os_family": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "os_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "os_version_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "patches": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "refresh_interval": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "server_group_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tags": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "timezone": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uptime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uuid": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ServerDetail": {
+                "type": "object",
+                "properties": {
+                    "CPU": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DISKS": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "MODEL": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "NICS": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "RAM": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SERIAL": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SERVICETAG": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "VENDOR": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "VERSION": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Disks": {
+                "type": "object",
+                "properties": {
+                    "SIZE": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TYPE": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Nics": {
+                "type": "object",
+                "properties": {
+                    "CONNECTED": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DEVICE": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "IPS": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "MAC": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TYPE": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "VENDOR": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Organization": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "access_key": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "addr1": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "addr2": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "billing_interval": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "billing_interval_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "cc_brand": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "cc_exp": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "cc_last": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "cc_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "city": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "create_time": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "server_limit": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stripe_cust": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "subscription": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "trial_end_time": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "trial_expired": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zipcode": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Command": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "server_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policy_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "command_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "command_type_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "args": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "response": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "response_time": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "create_time": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "exec_time": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Packages": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "server_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "package_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "installed": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ignored": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "deferred_until": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "display_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "VERSION": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "repo": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "package_type_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "group_ignored": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "group_deferred_until": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "cves": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "cve_score": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "package_version_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "os_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "os_version": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "os_version_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "create_time": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "User": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "features": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "firstname": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lastname": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "orgs": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tags": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UserOrgs": {
+                "type": "object",
+                "properties": {
+                    "access_key": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "trial_end_time": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "trial_expired": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Features": {
+                "type": "object",
+                "properties": {
+                    "mo": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ServerGroup": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "override": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "parent_server_group_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policy_set_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "refresh_interval": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ServerGroupP": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "override": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "parent_server_group_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "refresh_interval": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SoftwareVersion": {
+                "type": "object",
+                "properties": {
+                    "server_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "severity_low_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "severity_medium_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "severity_high_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "severity_other_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SIZE": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "results": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SoftwareSearch": {
+                "type": "object",
+                "properties": {
+                    "SIZE": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "results": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SoftwareSearchResults": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "display_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "os_family_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "os_family": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total_count": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SoftwareResults": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "software_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "display_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "VERSION": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "os_family": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "severity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "server_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "approvals": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "pending_update": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total_server_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total_severity_low_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total_severity_medium_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total_severity_high_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total_severity_other_count": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SoftwareApprovals": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "software_version_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policy_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "manual_approval": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "manual_approval_time": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "auto_approval": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "server_count": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PrePatch": {
+                "type": "object",
+                "properties": {
+                    "needsAttention": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "low": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "medium": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "high": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "other": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "devices": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Devices": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "createTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "group": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lastCheckinTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "needsReboot": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "os_family": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "compliant": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "patches": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Patches": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "packageVersionId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "severity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "cve": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "createTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "patchTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "needsApproval": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "NonCompliant": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "low": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "medium": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "high": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "other": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "devices": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "NCDevices": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "customName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "serverCreateTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lastCheckinTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lastRefreshTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "needsReboot": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "groupId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "os_family": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policies": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "NCPolicies": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TYPE": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "reasonForFail": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policyCreateTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "severity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "packages": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "NCPackages": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "severity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "packageVersionId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "createTime": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
