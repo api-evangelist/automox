@@ -1,0 +1,1092 @@
+{
+    "id": "30dee25d6e682e7ad336e2177e49342a",
+    "name": "Automox API",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "2aa21aade2b3acdca647c2107c124e16",
+            "name": "Get Events",
+            "url": "httpsconsole.automox.com\/api\/events",
+            "description": "Gets all `Event` objects for the authenticated user.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "2ed94014cb24d7dfde3fc691ce17383e",
+            "name": "Get Events",
+            "url": "httpsconsole.automox.com\/api\/events\/{id}",
+            "description": "Gets a specific `Event` object for the authenticated user.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "6bbebd5370deb92fca57186a470d2237",
+            "name": "Get Orgs",
+            "url": "httpsconsole.automox.com\/api\/orgs",
+            "description": "Gets all organizations for the api key\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "479191c834e8019ffd1ca71430d9ba42",
+            "name": "Get Orgs Packages",
+            "url": "httpsconsole.automox.com\/api\/orgs\/{id}\/packages",
+            "description": "Returns all software packages discovered on all servers (endpoints) of an organization\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "fd9984810a2e221f95a29bb469e60463",
+            "name": "Get Policies",
+            "url": "httpsconsole.automox.com\/api\/policies",
+            "description": "Gets all `Policy` objects for authenticated user\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "2edfbd82eaf4a1d6cedf6b95525c5296",
+            "name": "Get Policies",
+            "url": "httpsconsole.automox.com\/api\/policies\/{id}",
+            "description": "Gets a specific `Policy` object for the authenticated user.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "b3ae058437db067c43627ff0246b0f2e",
+            "name": "Put Policies",
+            "url": "httpsconsole.automox.com\/api\/policies\/{id}",
+            "description": "Updates a `Policy` object\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "policy",
+                    "description": "Updated policy object",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "20dd0efe868f88c8e426fd87ef2e3e4f",
+            "name": "Post Policies Action",
+            "url": "httpsconsole.automox.com\/api\/policies\/{id}\/action",
+            "description": "Schedule a policy for immediate remediation\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "action",
+                    "description": "Remediation action type [remediateAll]",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "1a731ed8f0a7be7ce8b169d2bb5df79f",
+            "name": "Get Policysets",
+            "url": "httpsconsole.automox.com\/api\/policysets",
+            "description": "Gets all `Policy Set` objects for authenticated user\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "35c9dcc704a77a552891bfc37bb82c8b",
+            "name": "Get Policystats",
+            "url": "httpsconsole.automox.com\/api\/policystats",
+            "description": "Gets all `Policy Stats` objects for authenticated user\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "7e42bc2b61f115b62af1392cf297eb22",
+            "name": "Get Servers",
+            "url": "httpsconsole.automox.com\/api\/servers",
+            "description": "Gets all `Server` objects for authenticated user\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "9a7fffa1fe9a9e19aa232ebe070ff925",
+            "name": "Get Servers",
+            "url": "httpsconsole.automox.com\/api\/servers\/{id}",
+            "description": "Gets a specific `Server` object for the authenticated user.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "c016826e82e613fe0bf3b9d9118d2162",
+            "name": "Put Servers",
+            "url": "httpsconsole.automox.com\/api\/servers\/{id}",
+            "description": "Updates a `Server` object\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "server",
+                    "description": "Updated server object",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "e6b11f55f2f213dc92fb693f815e3d83",
+            "name": "Delete Servers",
+            "url": "httpsconsole.automox.com\/api\/servers\/{id}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "d258d8fbb17897000f13dc068151f853",
+            "name": "Get Servers Packages",
+            "url": "httpsconsole.automox.com\/api\/servers\/{id}\/packages",
+            "description": "Returns the command queue for the specified server (endpoint)\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "f82cd3bd0f0ec628c43d88c4971db61a",
+            "name": "Get Servers Queues",
+            "url": "httpsconsole.automox.com\/api\/servers\/{id}\/queues",
+            "description": "Returns the command queue for the specified server (endpoint)\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "8cad3f6e1df1f6953a2e16e41dd4bc7b",
+            "name": "Post Servers Queues",
+            "url": "httpsconsole.automox.com\/api\/servers\/{id}\/queues",
+            "description": "Issue a command to an endpoint. Can be used to install a specific set of patches or reboot an endpoint\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "command",
+                    "description": "Command object",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "cb9ac3178604a2a8330bdf100dafcf0a",
+            "name": "Get Servergroups",
+            "url": "httpsconsole.automox.com\/api\/servergroups",
+            "description": "Gets all `Server Group` objects for authenticated user\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "de60da9924c1f34e8a2cca1f0a753e70",
+            "name": "Post Servergroups",
+            "url": "httpsconsole.automox.com\/api\/servergroups",
+            "description": "Updates a `Server Group` object\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "servergroup",
+                    "description": "Updated server object",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "14185427aa46ca17d296ee32bcf33ae0",
+            "name": "Get Servergroups",
+            "url": "httpsconsole.automox.com\/api\/servergroups\/{id}",
+            "description": "Gets a specific `Server Group` object for the authenticated user.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "b923dfb3c1f9ffea20c65fdb63be9358",
+            "name": "Put Servergroups",
+            "url": "httpsconsole.automox.com\/api\/servergroups\/{id}",
+            "description": "Updates a `Server Group` object\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "servergroup",
+                    "description": "Updated server object",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "e7ae1f0185953acf216733a6bf4350aa",
+            "name": "Delete Servergroups",
+            "url": "httpsconsole.automox.com\/api\/servergroups\/{id}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "8739489c279a817e30485b016659fdea",
+            "name": "Get Software Version",
+            "url": "httpsconsole.automox.com\/api\/software_version",
+            "description": "Retrieves software packages and patches for an organization, specific policy, or just those that need [approval | attention | exceptions | pending update].\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "policyId",
+                    "description": "Return results for a specific Policy ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "needsApproval",
+                    "description": "Retrieve software that needs approval",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "needsAttention",
+                    "description": "Retrieve software that needs attention",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "exceptions",
+                    "description": "Retrieve software that applies to exception endpoints",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pendingUpdate",
+                    "description": "Retrieve software that is pending update",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "l",
+                    "description": "Result Limit",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "p",
+                    "description": "Page Number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "8b07ce2bc84f866ae3739d832f0ff0c1",
+            "name": "Get Software",
+            "url": "httpsconsole.automox.com\/api\/software",
+            "description": "Retrieves software packages and patches for an organization, allows filtering the list of software by name\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "name",
+                    "description": "Name of software package (wildcards ok) i.e. *KB12345*",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Limit number of results returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "groupID",
+                    "description": "Return software for a given group ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "208a6450dce49fc2e462f0e0fa1cd579",
+            "name": "Put Approvals",
+            "url": "httpsconsole.automox.com\/api\/approvals\/{id}",
+            "description": "Update a manual approval record. Set `manual_approval` attribute of `approval` object to `true` to approve a patch; set it to `false` to reject a patch\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "approval",
+                    "description": "Approval object",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "4c71613e0bb8bac4233cbc6d388e628e",
+            "name": "Get Users",
+            "url": "httpsconsole.automox.com\/api\/users",
+            "description": "Gets all `User` objects for the authenticated user.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "o",
+                    "description": "Organization ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "fd3775160fd347d631898af0ac14d958",
+            "name": "Get Users Queues",
+            "url": "httpsconsole.automox.com\/api\/users\/{id}\/queues",
+            "description": "Gets all commands executed for specified user id\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "9327e6007fd6a67a0ae1933a63538d45",
+            "name": "Get Reports Prepatch",
+            "url": "httpsconsole.automox.com\/api\/reports\/prepatch",
+            "description": "Retrieve the prepatch report\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "startDate",
+                    "description": "Report Start Date - `YYYY-MM-DD`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        },
+        {
+            "id": "73629cff6ad7d5b722014a36c998ab0a",
+            "name": "Get Reports Noncompliance",
+            "url": "httpsconsole.automox.com\/api\/reports\/noncompliance",
+            "description": "Retrieve the non compliant devices report\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "startDate",
+                    "description": "Report Start Date - `YYYY-MM-DD`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "30dee25d6e682e7ad336e2177e49342a",
+            "rawModeData": ""
+        }
+    ]
+}
