@@ -1,0 +1,80 @@
+{
+    "name": "Automox",
+    "description": "Patch any System, any Software, in Any Location with Automox. Our cloud-based patching management software was built for today's IT professionals.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28761-docs-automox-com.jpg",
+    "tags": [
+        "have api",
+        "operations",
+        "relative data",
+        "security",
+        "servers",
+        "service api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/automox\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Automox API",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28761-docs-automox-com.jpg",
+            "humanURL": "https:\/\/automox.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/automox-api-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/automox-api.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/automox-api-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Blog",
+            "url": "https:\/\/www.automox.com\/blog"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/automox"
+        },
+        {
+            "type": "Documentation",
+            "url": "https:\/\/docs.automox.com\/"
+        },
+        {
+            "type": "Documentation",
+            "url": "https:\/\/docs.automox.com\/api\/"
+        },
+        {
+            "type": "Email",
+            "url": "info@automox.com"
+        },
+        {
+            "type": "Pricing",
+            "url": "https:\/\/www.automox.com\/pricing"
+        },
+        {
+            "type": "Support",
+            "url": "https:\/\/support.automox.com\/hc\/en-us"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/AutomoxApp"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/automox.com"
+        }
+    ]
+}
