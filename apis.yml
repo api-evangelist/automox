@@ -1,0 +1,62 @@
+aid: automox
+name: Automox
+description: >-
+  Automox is a cloud-native IT operations and endpoint management platform
+  that automates patching, configuration, and software deployment across
+  Windows, macOS, and Linux devices from a single console. The Automox API
+  is a REST API that gives developers programmatic access to organizations,
+  zones, devices, groups, policies, packages, worklets, commands, events,
+  reports, and users for building integrations and automating endpoint
+  management workflows, authenticated with API keys.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Endpoint Management
+  - Patch Management
+  - IT Operations
+  - Device Management
+  - Configuration Management
+  - Security
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/automox/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: automox:api
+    name: Automox API
+    description: >-
+      REST API for managing the Automox endpoint management platform
+      including organizations, zones, devices, groups, policies, packages,
+      worklets, commands, events, reports, and user accounts. Authentication
+      uses an API key issued from the Automox console and rate limits are
+      enforced per-user with a default of 100 authenticated requests per
+      second.
+    humanURL: https://developer.automox.com/
+    baseURL: https://console.automox.com/api
+    tags:
+      - Endpoint Management
+      - Patch Management
+      - Devices
+      - Policies
+      - Worklets
+    properties:
+      - type: Documentation
+        url: https://developer.automox.com/developer-portal/
+      - type: API Reference
+        url: https://developer.automox.com/openapi/axapi/
+      - type: REST API Overview
+        url: https://docs.automox.com/product/Product_Documentation/Miscellaneous/Automox_REST_based_API.htm
+
+common:
+  - type: Website
+    url: https://www.automox.com
+  - type: Documentation
+    url: https://docs.automox.com
+  - type: Pricing
+    url: https://www.automox.com/pricing
+  - type: Sign Up
+    url: https://console.automox.com/signup
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
