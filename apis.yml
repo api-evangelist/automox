@@ -43,7 +43,7 @@ apis:
     properties:
       - type: Documentation
         url: https://developer.automox.com/developer-portal/
-      - type: API Reference
+      - type: APIReference
         url: https://developer.automox.com/openapi/axapi/
       - type: REST API Overview
         url: https://docs.automox.com/product/Product_Documentation/Miscellaneous/Automox_REST_based_API.htm
@@ -55,7 +55,7 @@ common:
     url: https://docs.automox.com
   - type: Pricing
     url: https://www.automox.com/pricing
-  - type: Sign Up
+  - type: SignUp
     url: https://console.automox.com/signup
 maintainers:
   - FN: Kin Lane
