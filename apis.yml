@@ -49,6 +49,10 @@ apis:
         url: https://docs.automox.com/product/Product_Documentation/Miscellaneous/Automox_REST_based_API.htm
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/automox
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/automox
   - type: Website
     url: https://www.automox.com
   - type: Documentation
