@@ -1,0 +1,14 @@
+{
+  "repo": "automox",
+  "feeds": [
+    {
+      "source": "https://www.automox.com/blog",
+      "feed_url": "https://www.automox.com/blog",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-10-10T13:15:00Z"
+}

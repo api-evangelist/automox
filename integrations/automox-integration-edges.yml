@@ -22,37 +22,6 @@ edges:
   seller_name: Automox
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
-- partner_name: MCP Registry
-  partner: mcp
-  partner_match: register
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=com.automox
-  contract_reference:
-    register: registry.modelcontextprotocol.io
-    spec_file: null
-    role: mcp-server-listing
-    registered_name: com.automox/automox-mcp
-    register_id: com.automox/automox-mcp
-    detected_by: sweep-agent-tools.py
-    detected: '2026-10-14'
-  mcp_registry:
-    servers:
-    - com.automox/automox-mcp
-    hosted_remote: 0
-    local_package: 1
-    transports:
-      stdio: 1
-    auth_declared: 1
-    catalog_declared: false
-    namespace_domains:
-    - automox.com
-  matched_by:
-  - namespace-domain
-  detected_by: sweep-agent-tools.py
-  first_seen: '2026-10-14'
 - partner_name: Okta (own)
   partner: okta
   partner_match: mirror
@@ -93,6 +62,37 @@ edges:
   category: Vulnerability Management
   badges:
   - support:partner
+- partner_name: MCP Registry
+  partner: mcp
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=com.automox
+  contract_reference:
+    register: registry.modelcontextprotocol.io
+    spec_file: null
+    role: mcp-server-listing
+    registered_name: com.automox/automox-mcp
+    register_id: com.automox/automox-mcp
+    detected_by: sweep-agent-tools.py
+    detected: '2026-10-15'
+  mcp_registry:
+    servers:
+    - com.automox/automox-mcp
+    hosted_remote: 0
+    local_package: 1
+    transports:
+      stdio: 1
+    auth_declared: 1
+    catalog_declared: false
+    namespace_domains:
+    - automox.com
+  matched_by:
+  - namespace-domain
+  detected_by: sweep-agent-tools.py
+  first_seen: '2026-10-14'
 source:
 - okta/integrations/okta-integration-edges.yml
 - palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
