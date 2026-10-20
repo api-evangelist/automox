@@ -15,6 +15,25 @@
   relationship: distribution-channel
   status: not-a-workflow
   arazzo: null
+- slug: automox-mcp-registry
+  label: MCP Registry
+  partner: mcp
+  partner_name: MCP Registry
+  type: register
+  channel: standard-directory
+  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=com.automox
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: registry.modelcontextprotocol.io
+    spec_file: null
+    role: mcp-server-listing
+    registered_name: com.automox/automox-mcp
+    register_id: com.automox/automox-mcp
+    detected_by: sweep-agent-tools.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
 - slug: automox-okta-own
   label: Okta (own)
   partner: okta
@@ -41,22 +60,16 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: automox-mcp-registry
-  label: MCP Registry
-  partner: mcp
-  partner_name: MCP Registry
-  type: register
-  channel: standard-directory
-  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=com.automox
+- slug: automox-zendesk-own
+  label: Zendesk (own)
+  partner: zendesk
+  partner_name: Zendesk (own)
+  category: IT and HR
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.zendesk.com/marketplace/apps/support/1199531/automox-itsm/
   source: edge
-  relationship: standard-participant
-  contract_reference:
-    register: registry.modelcontextprotocol.io
-    spec_file: null
-    role: mcp-server-listing
-    registered_name: com.automox/automox-mcp
-    register_id: com.automox/automox-mcp
-    detected_by: sweep-agent-tools.py
-    detected: '2026-10-15'
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null
